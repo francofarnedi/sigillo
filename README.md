@@ -11,6 +11,8 @@ La CSP in `index.html` (`connect-src 'none'`) impedisce alla pagina qualsiasi ri
 
 Doppio clic su `index.html` (Chrome, Edge, Firefox, Safari). Funziona anche offline.
 
+Oppure provala online, senza scaricare nulla: **[francofarnedi.github.io/sigillo](https://francofarnedi.github.io/sigillo/)**. Anche la versione online gira tutta nel tuo browser: nessun file viene caricato.
+
 ## Cosa fa
 
 1. **Documento**: carica JPG/PNG/WebP/HEIC (HEIC solo su Safari) o PDF, con scelta della pagina.
