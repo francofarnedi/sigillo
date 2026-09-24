@@ -52,3 +52,12 @@ vendor/      pdf.js 3.11.174 (legacy) e jsPDF 2.5.2, in locale
 ```
 
 pdf.js gira con il "fake worker" (`pdf.worker.min.js` caricato via `<script>`), così funziona anche da `file://`.
+
+## Licenza
+
+Sigillo è rilasciato con licenza [MIT](LICENSE): puoi usarlo, modificarlo e redistribuirlo liberamente,
+a patto di mantenere l'avviso di copyright.
+
+Le librerie in `vendor/` restano con le loro licenze, riportate nell'intestazione di ciascun file:
+[pdf.js](https://github.com/mozilla/pdf.js) (Apache-2.0, © Mozilla Foundation) e
+[jsPDF](https://github.com/parallax/jsPDF) (MIT, © James Hall, yWorks GmbH e contributori).
