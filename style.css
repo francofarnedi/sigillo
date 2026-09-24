@@ -194,3 +194,4 @@ details.adv textarea { margin: 10px 0 8px; }
   .reg-item img { width: 80px; height: 56px; }
   .reg-item .reg-actions { grid-column: 1 / -1; }
 }
+.foot a { color: inherit; }

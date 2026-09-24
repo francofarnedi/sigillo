@@ -15,16 +15,49 @@ Oppure provala online, senza scaricare nulla: **[francofarnedi.github.io/sigillo
 
 ### Con Docker
 
-Per ospitarlo sul server aziendale o nella rete di casa:
+Utile per ospitare Sigillo su un server aziendale, su un NAS o su un PC della rete di casa, così lo usano
+anche colleghi e famiglia. L'immagine è pubblicata su GitHub Container Registry:
+[`ghcr.io/francofarnedi/sigillo`](https://github.com/users/francofarnedi/packages/container/package/sigillo),
+per computer Intel/AMD e ARM (Mac Apple Silicon, Raspberry Pi). Non serve un account GitHub per scaricarla.
+
+**1. Installa Docker** (una volta sola): [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+su Mac e Windows, oppure Docker Engine su Linux.
+
+**2. Scarica l'immagine** di una versione precisa (consigliato) o l'ultima:
 
 ```bash
-docker run -d --name sigillo -p 8080:8080 --read-only --tmpfs /tmp ghcr.io/francofarnedi/sigillo:latest
+docker pull ghcr.io/francofarnedi/sigillo:0.2.0
 ```
 
-Poi apri http://localhost:8080. In alternativa c'è `docker-compose.yml` (`docker compose up -d`).
-L'immagine serve solo file statici con nginx: gira senza root, non tiene log degli accessi e con la CSP
-blocca ogni richiesta in uscita. Anche qui i documenti vengono elaborati nel browser e non arrivano mai al server.
-Per costruirla dai sorgenti: `docker build -t sigillo .`
+**3. Avvia l'app**:
+
+```bash
+docker run -d --name sigillo -p 8080:8080 --read-only --tmpfs /tmp --restart unless-stopped ghcr.io/francofarnedi/sigillo:0.2.0
+```
+
+**4. Aprila** nel browser: http://localhost:8080 (dagli altri PC della rete: `http://<indirizzo-del-server>:8080`).
+
+Comandi utili:
+
+| Cosa | Comando |
+|---|---|
+| Fermarla | `docker stop sigillo` |
+| Riavviarla | `docker start sigillo` |
+| Vedere se è attiva | `docker ps --filter name=sigillo` |
+| Aggiornarla a una nuova versione | `docker rm -f sigillo`, poi ripeti i punti 2 e 3 con il nuovo numero |
+| Usare un'altra porta (es. 9000) | sostituisci `-p 8080:8080` con `-p 9000:8080` |
+
+**Con Docker Compose**: scarica [`docker-compose.yml`](docker-compose.yml) in una cartella e lancia
+`docker compose up -d`. Per aggiornare: `docker compose pull && docker compose up -d`.
+
+**Tag disponibili**: `0.2.0` (versione esatta), `0.2` (ultima correzione della 0.2), `latest` (ultimo commit su `main`).
+
+**Dai sorgenti**: `docker build -t sigillo .` e poi `docker run -d -p 8080:8080 sigillo`.
+
+L'immagine serve solo file statici con nginx. Gira senza root e non tiene log degli accessi, e la CSP blocca
+ogni richiesta in uscita. Anche qui i documenti vengono elaborati **nel browser** di chi usa l'app e non arrivano
+mai al server: il container non ha niente da conservare. Nota: se lo esponi fuori dalla tua rete, mettilo
+dietro HTTPS (per esempio un reverse proxy come Caddy o Traefik).
 
 ## Cosa fa
 

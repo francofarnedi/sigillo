@@ -1,6 +1,7 @@
 # docker compose up -d   →   http://localhost:8080
 services:
   sigillo:
+    # "latest" = ultimo commit su main; per fissare una versione usa ad es. :0.2.0
     image: ghcr.io/francofarnedi/sigillo:latest
     # per costruirla dai sorgenti locali al posto dell'immagine pubblicata:
     # build: .
