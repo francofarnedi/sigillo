@@ -69,7 +69,7 @@ pdf.js gira con il "fake worker" (`pdf.worker.min.js` caricato via `<script>`), 
 ## Contribuire
 
 Segnalazioni, idee e pull request sono benvenute: leggi [CONTRIBUTING.md](CONTRIBUTING.md).
-Per le vulnerabilità di sicurezza segui [SECURITY.md](SECURITY.md).
+Per le vulnerabilità di sicurezza segui [SECURITY.md](SECURITY.md). Chi partecipa rispetta il [codice di condotta](CODE_OF_CONDUCT.md).
 
 ## Licenza
 
