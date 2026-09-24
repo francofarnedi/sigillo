@@ -1,0 +1,15 @@
+# docker compose up -d   →   http://localhost:8080
+services:
+  sigillo:
+    image: ghcr.io/francofarnedi/sigillo:latest
+    # per costruirla dai sorgenti locali al posto dell'immagine pubblicata:
+    # build: .
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

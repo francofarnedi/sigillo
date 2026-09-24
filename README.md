@@ -13,6 +13,19 @@ Scarica lo zip dell'ultima [release](https://github.com/francofarnedi/sigillo/re
 
 Oppure provala online, senza scaricare nulla: **[francofarnedi.github.io/sigillo](https://francofarnedi.github.io/sigillo/)**. Anche la versione online gira tutta nel tuo browser: nessun file viene caricato.
 
+### Con Docker
+
+Per ospitarlo sul server aziendale o nella rete di casa:
+
+```bash
+docker run -d --name sigillo -p 8080:8080 --read-only --tmpfs /tmp ghcr.io/francofarnedi/sigillo:latest
+```
+
+Poi apri http://localhost:8080. In alternativa c'è `docker-compose.yml` (`docker compose up -d`).
+L'immagine serve solo file statici con nginx: gira senza root, non tiene log degli accessi e con la CSP
+blocca ogni richiesta in uscita. Anche qui i documenti vengono elaborati nel browser e non arrivano mai al server.
+Per costruirla dai sorgenti: `docker build -t sigillo .`
+
 ## Cosa fa
 
 1. **Documento**: carica JPG/PNG/WebP/HEIC (HEIC solo su Safari) o PDF, con scelta della pagina.
