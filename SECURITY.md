@@ -10,6 +10,8 @@ Grazie se ci aiuti a trovarle.
 1. vai su [Security → Report a vulnerability](https://github.com/francofarnedi/sigillo/security/advisories/new);
 2. descrivi il problema, i passi per riprodurlo e l'impatto che immagini.
 
+Se non puoi usare GitHub, scrivi a [franco@farnedi.it](mailto:franco@farnedi.it).
+
 Non allegare documenti reali: usa il documento fittizio di esempio dell'app.
 
 Rispondo di solito entro 7 giorni. Concordiamo insieme i tempi di correzione e, se vuoi,

@@ -32,9 +32,13 @@ Il maintainer ([@francofarnedi](https://github.com/francofarnedi)) ha il compito
 queste regole. Può modificare o rimuovere commenti, commit, codice e issue che non le rispettano
 e, nei casi più gravi, escludere una persona dal progetto, in modo temporaneo o permanente.
 
-Per segnalare un comportamento scorretto contatta il maintainer tramite il suo profilo GitHub.
-Se la segnalazione riguarda dati personali pubblicati, usa il canale privato indicato in
-[SECURITY.md](SECURITY.md). Ogni segnalazione viene gestita con riservatezza.
+Per segnalare un comportamento scorretto contatta il maintainer:
+
+- email: [franco@farnedi.it](mailto:franco@farnedi.it)
+- LinkedIn: [linkedin.com/in/francofarnedi](https://www.linkedin.com/in/francofarnedi)
+
+Ogni segnalazione viene gestita con riservatezza. Se riguarda dati personali pubblicati,
+scrivi subito via email: il contenuto viene rimosso il prima possibile.
 
 Queste regole valgono in tutti gli spazi del progetto e quando qualcuno rappresenta
 pubblicamente il progetto.
