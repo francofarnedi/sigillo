@@ -1,0 +1,48 @@
+name: Bug
+description: Qualcosa non funziona come dovrebbe
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie della segnalazione! **Non allegare documenti reali**: usa il documento di esempio dell'app.
+        Per una vulnerabilità di sicurezza non usare questo modulo, leggi [SECURITY.md](https://github.com/francofarnedi/sigillo/blob/main/SECURITY.md).
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa succede
+      description: Descrivi il problema. Cosa ti aspettavi e cosa è successo invece?
+    validations:
+      required: true
+  - type: textarea
+    id: passi
+    attributes:
+      label: Passi per riprodurlo
+      placeholder: |
+        1. Carico un PDF di 2 pagine
+        2. Scelgo la pagina 2
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: dove
+    attributes:
+      label: Come la stai usando
+      options:
+        - Demo online (GitHub Pages)
+        - File locale (doppio clic su index.html)
+        - Server locale
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser e sistema
+      placeholder: Chrome 140 su macOS, Safari su iPhone...
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Errori in console o screenshot
+      description: Facoltativo. Controlla che nello screenshot non ci siano dati personali.

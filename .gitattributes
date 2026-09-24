@@ -1,0 +1,4 @@
+# esclusi dagli zip delle release: servono solo a chi sviluppa
+.github export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore

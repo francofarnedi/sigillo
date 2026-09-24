@@ -1,0 +1,24 @@
+name: Idea
+description: Proponi una funzione o un miglioramento
+labels: [idea]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Quale problema risolve
+      description: In che situazione ti servirebbe? Chi la userebbe?
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Cosa proponi
+    validations:
+      required: true
+  - type: checkboxes
+    id: vincoli
+    attributes:
+      label: Vincoli del progetto
+      options:
+        - label: L'idea funziona senza inviare nulla in rete e senza server
+          required: true

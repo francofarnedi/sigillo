@@ -9,7 +9,7 @@ La CSP in `index.html` (`connect-src 'none'`) impedisce alla pagina qualsiasi ri
 
 ## Avvio
 
-Doppio clic su `index.html` (Chrome, Edge, Firefox, Safari). Funziona anche offline.
+Scarica lo zip dell'ultima [release](https://github.com/francofarnedi/sigillo/releases/latest), estrailo e fai doppio clic su `index.html` (Chrome, Edge, Firefox, Safari). Funziona anche offline.
 
 Oppure provala online, senza scaricare nulla: **[francofarnedi.github.io/sigillo](https://francofarnedi.github.io/sigillo/)**. Anche la versione online gira tutta nel tuo browser: nessun file viene caricato.
 
@@ -52,6 +52,11 @@ vendor/      pdf.js 3.11.174 (legacy) e jsPDF 2.5.2, in locale
 ```
 
 pdf.js gira con il "fake worker" (`pdf.worker.min.js` caricato via `<script>`), così funziona anche da `file://`.
+
+## Contribuire
+
+Segnalazioni, idee e pull request sono benvenute: leggi [CONTRIBUTING.md](CONTRIBUTING.md).
+Per le vulnerabilità di sicurezza segui [SECURITY.md](SECURITY.md).
 
 ## Licenza
 

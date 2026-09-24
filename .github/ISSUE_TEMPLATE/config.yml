@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Domande e discussioni
+    url: https://github.com/francofarnedi/sigillo/discussions
+    about: Per dubbi, domande d'uso e idee ancora da definire.
+  - name: Vulnerabilità di sicurezza
+    url: https://github.com/francofarnedi/sigillo/security/advisories/new
+    about: Segnalale in privato, non con una issue pubblica.
